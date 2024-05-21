@@ -6,14 +6,8 @@ namespace FirstWebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PostsController : ControllerBase
+    public class PostsController(IPostService _postService) : ControllerBase // DI by constructor injection
     {
-        private readonly PostService _postService;
-        public PostsController()
-        {
-            _postService = new PostService();//no DI, coupling
-        }
-
         [HttpGet("id")]
         public async Task<ActionResult<Post>> GetPost(int id)
         {
@@ -47,8 +41,6 @@ namespace FirstWebApi.Controllers
             await _postService.DeletePost(id);
             return Ok();
         }
-
-
 
     }
 }

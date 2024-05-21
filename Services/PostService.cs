@@ -2,7 +2,7 @@
 
 namespace FirstWebApi.Models;
 
-public class PostService
+public class PostService : IPostService
 {
   private static readonly List<Post> AllPosts = new();//an empty list ready to be added
 

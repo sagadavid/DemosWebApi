@@ -76,3 +76,11 @@ bin/Debug/net8.0/FirstWebApi.pdb
 /bin/
 /obj/
 
+obj/Debug/net8.0/FirstWebApi.AssemblyInfo.cs
+obj/Debug/net8.0/FirstWebApi.AssemblyInfoInputs.cache
+obj/Debug/net8.0/FirstWebApi.dll
+obj/Debug/net8.0/FirstWebApi.pdb
+obj/Debug/net8.0/ref/FirstWebApi.dll
+obj/Debug/net8.0/refint/FirstWebApi.dll
+bin/Debug/net8.0/FirstWebApi.dll
+bin/Debug/net8.0/FirstWebApi.pdb

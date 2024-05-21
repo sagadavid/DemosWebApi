@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "FirstWebApi/1.0.0": {
         "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.2",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
