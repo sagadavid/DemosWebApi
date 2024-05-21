@@ -1,0 +1,50 @@
+# Ignore bin and obj folders
+bin/
+obj/
+
+# Ignore user-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore Visual Studio files
+.vscode/
+*.vs
+
+# Ignore build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Ignore NuGet packages
+*.nuget/
+*.nupkg
+*.paket/
+packages/
+*.lock.json
+*.bin
+*.cache
+*.dll
+*.exe
+*.pdb
+*.log
+*.vspscc
+*.vssscc
+.venv/
+.vscode/
+
+# Ignore node modules
+node_modules/
+
+.fake
