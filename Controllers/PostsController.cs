@@ -25,6 +25,14 @@ namespace FirstWebApi.Controllers
             return Ok(idPost);
         }
 
+        [HttpPost]
+        public async Task<ActionResult<Post>> CreatePost(Post post)
+        {
+            await _postService.CreatePost(post);
+            return CreatedAtAction(nameof(GetPost), new { id = post.Id }, post);
+        }
+
+
 
     }
 }
