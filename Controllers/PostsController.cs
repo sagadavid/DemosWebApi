@@ -8,16 +8,23 @@ namespace FirstWebApi.Controllers
     [ApiController]
     public class PostsController : ControllerBase
     {
-        public ActionResult<List<Post>> GetPosts()
+        private readonly PostService _postService;
+        public PostsController()
         {
-            return new List<Post>{
-                new () { UserId = 1, Id = 1, Title = "Title1", Body = "Body1" },
-                 new () { UserId = 2, Id = 2, Title = "Title2", Body = "Body2" },
-                  new () { UserId = 3, Id = 3, Title = "Title3", Body = "Body3" },
-                   new () { UserId = 4, Id = 4, Title = "Title4", Body = "Body4" },
-                   new () { UserId = 5, Id = 5, Title = "Title5", Body = "Body5" }
-
-            };
+            _postService = new PostService();//no DI, coupling
         }
+
+        [HttpGet("id")]
+        public async Task<ActionResult<Post>> GetPost(int id)
+        {
+            var idPost = await _postService.GetPost(id);
+            if (idPost == null)
+            {
+                return NotFound();
+            }
+            return Ok(idPost);
+        }
+
+
     }
 }
