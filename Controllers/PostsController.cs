@@ -32,6 +32,22 @@ namespace FirstWebApi.Controllers
             return CreatedAtAction(nameof(GetPost), new { id = post.Id }, post);
         }
 
+        [HttpPut("id")]
+        public async Task<ActionResult> UpdatePost(Post post, int id)
+        {
+            if (id != post.Id) { return BadRequest(); }
+            var toUpdate = await _postService.UpdatePost(id, post);
+            if (toUpdate == null) { return NotFound(); }
+            return Ok(toUpdate);
+        }
+
+        [HttpDelete("id")]
+        public async Task<ActionResult> DeletePost(int id)
+        {
+            await _postService.DeletePost(id);
+            return Ok();
+        }
+
 
 
     }

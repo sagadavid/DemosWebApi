@@ -4,12 +4,11 @@ namespace FirstWebApi.Models;
 
 public class PostService
 {
-  private static readonly List<Post> AllPosts = new();
+  private static readonly List<Post> AllPosts = new();//an empty list ready to be added
 
   public Task CreatePost(Post item)
   {
     AllPosts.Add(item);
-    //return Task.FromResult(AllPosts);
     return Task.CompletedTask;
   }
 
@@ -20,11 +19,7 @@ public class PostService
 
   public Task<Post?> GetPost(int id)
   {
-    /** less efficient styles..
-        var idPost = AllPosts.Where(x => x.Id == id).FirstOrDefault();// 2 lists created
-        var idPost = AllPosts.FirstOrDefault(p => p.Id == id);
-        return Task.FromResult(idPost);
-        **/
+
     return Task.FromResult(AllPosts.FirstOrDefault(x => x.Id == id));
   }
 
