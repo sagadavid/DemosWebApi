@@ -6,7 +6,7 @@ namespace FirstWebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PostsController(IPostService _postService) : ControllerBase // DI by constructor injection
+    public class PostsController(IPostService _postService) : ControllerBase // DI by primarykey injection
     {
         [HttpGet("id")]
         public async Task<ActionResult<Post>> GetPost(int id)

@@ -11,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IPostService, PostService>();//dotnet add package Microsoft.Extensions.DependencyInjection
+builder.Services.AddScoped<IDemoInjectService, DemoInjectService>();
 
 var app = builder.Build();
 
