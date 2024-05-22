@@ -20,10 +20,10 @@ namespace FirstWebApi.Controllers
         }
 
         [HttpGet]
-        public ActionResult Get([FromServices] ITransientService transientService)
+        public ActionResult Get()
         {
             var scopedServiceMessage = _scopedService.HilsPublikum();
-            var transientServiceMessage = transientService.HilsPublikum();
+            var transientServiceMessage = _transientService.HilsPublikum();
             var singletonServiceMessage = _singletonService.HilsPublikum();
             return Content(
                 $"{scopedServiceMessage}{Environment.NewLine}{transientServiceMessage}{Environment.NewLine}{singletonServiceMessage}");

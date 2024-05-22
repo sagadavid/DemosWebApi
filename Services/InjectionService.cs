@@ -13,7 +13,7 @@ public class InjectionService : IInjectionService
 
   public string HilsPublikum()
   {
-    return $"Hei :) min guidNo er {injectGuid}, \n og min fremkomst time er {injectTime:yyyy-MM-dd HH:mm:ss}, \n og guid (kan) fornyes på lifecycle av injection type: scoped, singleton eller transient !";
+    return $"Hei, guidNo er {injectGuid}, \n og fremkomst-time er {injectTime:yyyy-MM-dd HH:mm:ss},\n guid (kan) fornyes an på lifecycle av injection type: scoped, singleton eller transient !";
   }
 
 }
