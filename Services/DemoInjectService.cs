@@ -13,7 +13,7 @@ public class DemoInjectService : IDemoInjectService
 
   public string HilsPublikum()
   {
-    return $"Hei :) min guidNo er {injectGuid} og min fremkomst time er {injectTime:yyyy-MM-dd HH:mm:ss} !";
+    return $"Hei :) min guidNo er {injectGuid}, \n og min fremkomst time er {injectTime:yyyy-MM-dd HH:mm:ss} !";
   }
 
 }
