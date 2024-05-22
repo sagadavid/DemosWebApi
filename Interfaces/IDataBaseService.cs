@@ -2,5 +2,5 @@
 
 public interface IDataBaseService
 {
-  public string GetData();
+  string GetData();
 }

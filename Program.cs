@@ -34,8 +34,17 @@ builder.Services.AddKeyedScoped<IDataBaseService, CosmosService>("cosmosService"
 //builder.Services.AddKeyedSingleton<IDataBaseService, SqlService>("sqlService");
 //builder.Services.AddKeyedSingleton<IDataBaseService, CosmosService>("cosmosService");
 
-
 var app = builder.Build();
+
+//scoped service for limited duration in program startup
+using (var serviceScope = app.Services.CreateScope())
+{
+    var services = serviceScope.ServiceProvider;
+
+    var tempoService = services.GetRequiredService<IInjectionService>();
+    var message = tempoService.HilsPublikum();
+    Console.WriteLine(message);
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
