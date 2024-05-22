@@ -1,3 +1,4 @@
+using DemosWebApi;
 using FirstWebApi;
 using FirstWebApi.Models;
 
@@ -12,12 +13,15 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IPostService, PostService>();//dotnet add package Microsoft.Extensions.DependencyInjection
 
-builder.Services.AddScoped<IInjectionService, InjectionService>();
-//builder.Services.AddSingleton<IInjectionService, InjectionService>();
+//builder.Services.AddScoped<IInjectionService, InjectionService>();
+builder.Services.AddSingleton<IInjectionService, InjectionService>();
+//builder.Services.AddTransient<IInjectionService, InjectionService>();
 
-builder.Services.AddScoped<IScopedService, ScopedService>();
-builder.Services.AddTransient<ITransientService, TransientService>();
-builder.Services.AddSingleton<ISingletonService, SingletonService>();
+//builder.Services.AddScoped<IScopedService, ScopedService>();
+//builder.Services.AddTransient<ITransientService, TransientService>();
+//builder.Services.AddSingleton<ISingletonService, SingletonService>();
+
+builder.Services.AddServicesAtOnce();//multiple services added at once !
 
 var app = builder.Build();
 

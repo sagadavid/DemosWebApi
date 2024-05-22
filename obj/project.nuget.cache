@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xb0iUawylDw=",
+  "dgSpecHash": "D+j58mikESQ=",
   "success": true,
-  "projectFilePath": "/Users/dasmac/webapis/FirstWebApi/FirstWebApi.csproj",
+  "projectFilePath": "/Users/dasmac/webapis/FirstWebApi/DemosWebApi.csproj",
   "expectedPackageFiles": [
     "/Users/dasmac/.nuget/packages/humanizer/2.14.1/humanizer.2.14.1.nupkg.sha512",
     "/Users/dasmac/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
