@@ -1,6 +1,6 @@
 ﻿namespace FirstWebApi;
 
-public interface IDemoInjectService
+public interface IInjectionService
 {
   string HilsPublikum();
 }

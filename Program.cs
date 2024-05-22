@@ -12,8 +12,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IPostService, PostService>();//dotnet add package Microsoft.Extensions.DependencyInjection
 
-builder.Services.AddScoped<IDemoInjectService, DemoInjectService>();
-builder.Services.AddSingleton<IDemoInjectService, DemoInjectService>();
+builder.Services.AddScoped<IInjectionService, InjectionService>();
+//builder.Services.AddSingleton<IInjectionService, InjectionService>();
 
 builder.Services.AddScoped<IScopedService, ScopedService>();
 builder.Services.AddTransient<ITransientService, TransientService>();
