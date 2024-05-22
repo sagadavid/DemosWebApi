@@ -26,7 +26,7 @@ namespace FirstWebApi.Controllers
             var transientServiceMessage = _transientService.HilsPublikum();
             var singletonServiceMessage = _singletonService.HilsPublikum();
             return Content(
-                $"{scopedServiceMessage}{Environment.NewLine}{transientServiceMessage}{Environment.NewLine}{singletonServiceMessage}");
+                $"{scopedServiceMessage}{Environment.NewLine}\n{transientServiceMessage}{Environment.NewLine}\n{singletonServiceMessage}");
         }
     }
 }

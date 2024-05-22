@@ -1,6 +1,7 @@
 using DemosWebApi;
 using FirstWebApi;
 using FirstWebApi.Models;
+using Microsoft.Build.Framework;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,10 @@ builder.Services.AddTransient<IInjectionService, InjectionService>();
 //builder.Services.AddSingleton<ISingletonService, SingletonService>();
 
 builder.Services.AddServicesAtOnce();//multiple services added at once !
+
+//manage multiple services which implement same interface
+builder.Services.AddKeyedScoped<IDataBaseService, SqlService>("sqlService");
+builder.Services.AddKeyedScoped<IDataBaseService, CosmosService>("cosmosService");
 
 var app = builder.Build();
 

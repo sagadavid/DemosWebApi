@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "AcmjI4IOUZLUdfYRaGu9bk+9T+4EGTjFH8RW0cZHDco=",
-  "Source": "DemosWebApi",
-  "BasePath": "_content/DemosWebApi",
+  "Hash": "1XyL0z7WASOEKgCdEw7y0saffVj3bUAQPR5aDUyHKxI=",
+  "Source": "FirstWebApi",
+  "BasePath": "_content/FirstWebApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

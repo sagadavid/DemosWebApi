@@ -7,10 +7,11 @@ cd .dotnet
 dotnet dev-certs https --trust  
 dotnet build
 mkdir webapis  
+
 dotnet new webapi -n FirstWebApi -controllers
 dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
 dotnet tool install -g dotnet-aspnet-codegenerator
-dotnet-aspnet-codegenerator controller -name LifeTimeController -api -outDir Controllers
+dotnet-aspnet-codegenerator controller -name KeyedServicesController -api -outDir Controllers
 dotnet add package Microsoft.Extensions.DependencyInjection
 
 

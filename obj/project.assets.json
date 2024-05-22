@@ -6113,9 +6113,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/dasmac/webapis/FirstWebApi/DemosWebApi.csproj",
-      "projectName": "DemosWebApi",
-      "projectPath": "/Users/dasmac/webapis/FirstWebApi/DemosWebApi.csproj",
+      "projectUniqueName": "/Users/dasmac/webapis/FirstWebApi/FirstWebApi.csproj",
+      "projectName": "FirstWebApi",
+      "projectPath": "/Users/dasmac/webapis/FirstWebApi/FirstWebApi.csproj",
       "packagesPath": "/Users/dasmac/.nuget/packages/",
       "outputPath": "/Users/dasmac/webapis/FirstWebApi/obj/",
       "projectStyle": "PackageReference",
