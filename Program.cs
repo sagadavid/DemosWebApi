@@ -28,6 +28,13 @@ builder.Services.AddServicesAtOnce();//multiple services added at once !
 builder.Services.AddKeyedScoped<IDataBaseService, SqlService>("sqlService");
 builder.Services.AddKeyedScoped<IDataBaseService, CosmosService>("cosmosService");
 
+//keyed services as transient, scoped, singleton
+//builder.Services.AddKeyedTransient<IDataBaseService, SqlService>("sqlService");
+//builder.Services.AddKeyedTransient<IDataBaseService, CosmosService>("cosmosService");
+//builder.Services.AddKeyedSingleton<IDataBaseService, SqlService>("sqlService");
+//builder.Services.AddKeyedSingleton<IDataBaseService, CosmosService>("cosmosService");
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
